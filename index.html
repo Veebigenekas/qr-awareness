@@ -1,9 +1,201 @@
-<html>
-<head>
-    <title>QR Awareness</title>
-</head>
-<body>
-    <h1>QR Awareness</h1>
-    <p>Kohtume Aatriumi politseipunktis, teisel korrusel ruum nr. 217</p>
-</body>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoiatus: QR-koodi oht</title>
+    <style>
+      :root {
+        --primary-red: #e11d48;
+        --dark-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-light: #f8fafc;
+        --text-muted: #94a3b8;
+        --accent-yellow: #f59e0b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .warning-icon {
+        font-size: 80px;
+        color: var(--primary-red);
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary-red);
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: -0.025em;
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: var(--text-light);
+      }
+
+      .risks-grid {
+        display: grid;
+        gap: 15px;
+        margin-bottom: 2rem;
+      }
+
+      .risk-card {
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary-red);
+        text-align: left;
+        transition: transform 0.2s;
+      }
+
+      .risk-card:hover {
+        transform: scale(1.02);
+      }
+
+      .risk-card h3 {
+        color: var(--accent-yellow);
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+
+      .risk-card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+      }
+
+      .disclaimer {
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px dashed var(--accent-yellow);
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        color: var(--accent-yellow);
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-red);
+        color: white;
+        padding: 16px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 10px 15px -3px rgba(225, 29, 72, 0.3);
+        margin-bottom: 1.5rem;
+      }
+
+      .btn:hover {
+        background-color: #be123c;
+        transform: translateY(-2px);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .ria-link {
+        display: block;
+        color: var(--text-muted);
+        text-decoration: underline;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      .ria-link:hover {
+        color: var(--text-light);
+      }
+
+      .police-info {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        font-size: 1rem;
+        color: var(--text-muted);
+        font-style: italic;
+      }
+
+      .police-info strong {
+        color: var(--text-light);
+      }
+
+      @media (max-width: 480px) {
+        h1 { font-size: 1.8rem; }
+        .intro-text { font-size: 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="warning-icon">⚠️</span>
+      <h1>Ära skänni tundmatut QR-koodi!</h1>
+      
+      <p class="intro-text">
+        QR-koodi skännimine on mugav, kuid see võib olla ohtlikum kui sa arvad.
+      </p>
+
+      <div class="risks-grid">
+        <div class="risk-card">
+          <h3>Õngitsuslehed (Phishing)</h3>
+          <p>QR-kood võib suunata sind võltsitud veebilehele, mis püüab varastada sinu sisselogimisandmeid või pangakoode.</p>
+        </div>
+        <div class="risk-card">
+          <h3>Pahavara (Malware)</h3>
+          <p>Skännimine võib käivitada automaatse allalaadimise, mis nakatab sinu seadme nuhkvara või viirustega.</p>
+        </div>
+        <div class="risk-card">
+          <h3>Andmete vargus</h3>
+          <p>Kurjategijad võivad saada ligipääsu sinu kontaktidele, asukohale või isiklikule informatsioonile.</p>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        See konkreetne QR-kood oli vaid turvateadlikkuse näide ürituse raames. Sinu andmed on seekord kaitstud.
+      </div>
+
+      <a href="#details" class="btn">Uuri miks tundmatuid QR-koode ei tasu skännida</a>
+
+      <a href="https://www.ria.ee/blogi/qr-kood-mugav-abimees-voi-varjatud-oht" target="_blank" class="ria-link">
+        Loe lähemalt: QR-kood – mugav abimees või varjatud oht? (RIA blogi)
+      </a>
+
+      <div class="police-info">
+        Rohkem informatsiooni kelmuste kohta <strong>2. korrusel ruumis nr. 217</strong> asuvas politseipunktis.
+      </div>
+    </div>
+  </body>
 </html>
+
