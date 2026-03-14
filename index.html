@@ -1,1 +1,129 @@
-<!DOCTYPE html>\n<html lang="et">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>QR-Koodi Hoidus</title>\n</head>\n<body>\n    <h1>Ära skänni tundmatuid QR-koode!</h1>\n    <p>See QR-kood on osa turvateadlikkuse projektist. Päriselus võib QR-kood viia pahatahtlikule lehele.</p>\n    <a href="https://www.ria.ee/blogi/qr-kood-mugav-abimees-voi-varjatud-oht">Loe siit miks see võib olla ohtlik:</a>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Koodi Hoidus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .warning-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #d32f2f;
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 4px;
+            text-align: left;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .info-text {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        
+        .cta-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .cta-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-link:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                border-radius: 12px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                padding: 12px;
+                font-size: 15px;
+            }
+            
+            .info-text {
+                font-size: 14px;
+            }
+            
+            .cta-link {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-icon">⚠️</div>
+        <h1>Ära skänni tundmatuid QR-koode!</h1>
+        
+        <div class="subtitle">
+            <strong>See QR-kood on osa turvateadlikkuse projektist.</strong><br>
+            Päriselus võib QR-kood viia pahatahtlikule lehele.
+        </div>
+        
+        <p class="info-text">
+            QR-koodid on mugavad, kuid need võivad olla ohtlikud. Enne QR-koodi skaneerimist veendu, et sa usaldad selle allikat.
+        </p>
+        
+        <a href="https://www.ria.ee/blogi/qr-kood-mugav-abimees-voi-varjatud-oht" class="cta-link">Loe siit miks see võib olla ohtlik</a>
+    </div>
+</body>
+</html>
